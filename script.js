@@ -1,0 +1,4 @@
+document.querySelector('.menu').addEventListener('click',()=>{const n=document.querySelector('.nav nav');n.classList.toggle('open')});
+document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav nav').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const msg=`Hi SK Web Studio, I want to discuss a website.%0A%0AName: ${encodeURIComponent(f.get('name'))}%0ABusiness: ${encodeURIComponent(f.get('business'))}%0APhone: ${encodeURIComponent(f.get('phone'))}%0AService: ${encodeURIComponent(f.get('service'))}%0AMessage: ${encodeURIComponent(f.get('message'))}`;window.open('https://wa.me/917801060029?text='+msg,'_blank')});
